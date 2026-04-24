@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Sinica | Ristorante Friuli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-bar">
+        <div class="logo">
+            <h1>La Sinica</h1>
+            <p>CUCINA FRIULANA</p>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero-slider">
+        <div class="slideshow-container">
+            <div class="slide active" style="background-image: url('images/La Sinica - home (1).jpeg');"></div>
+            <div class="slide" style="background-image: url('images/La Sinica - home (2).jpeg');"></div>
+            <div class="slide" style="background-image: url('images/La Sinica - home (3).jpeg');"></div>
+            <div class="slide" style="background-image: url('images/La Sinica - home (4).jpeg');"></div>
+            <div class="slide" style="background-image: url('images/La Sinica - home (5).jpeg');"></div>
+        </div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h2 data-i18n="hero_title">Benvenuti a La Sinica</h2>
+                <div class="hero-tagline" data-i18n="hero_slogan">La Sinica – La tradizione friulana, come a casa.</div>
+                <a href="Contatti.html" class="btn-reserve" data-i18n="hero_reserve">Prenota un tavolo</a>
+            </div>
+        </div>
+        <button class="slider-prev" id="sliderPrev">❮</button>
+        <button class="slider-next" id="sliderNext">❯</button>
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <div class="container home-intro">
+        <div class="grid-2col">
+            <div class="grid-text">
+                <p class="lead-text" data-i18n="home_intro">Un ristorante immerso nella natura friulana, dove la cucina tipica incontra l'autenticità dei prodotti locali. Qui si mangia come a casa: piatti genuini, atmosfera rilassante, sapori che raccontano la tradizione.</p>
+                <h3 data-i18n="home_cuisine_title">Cucina tipica friulana</h3>
+                <ul class="features-list">
+                    <li><span class="emoji-icon">🍽️</span> <span data-i18n="home_feat1">ricette artigianali</span></li>
+                    <li><span class="emoji-icon">🌿</span> <span data-i18n="home_feat2">ingredienti locali e controllati</span></li>
+                    <li><span class="emoji-icon">🧀</span> <span data-i18n="home_feat3">piatti preparati secondo tradizione</span></li>
+                    <li><span class="emoji-icon">🍷</span> <span data-i18n="home_feat4">sapori raffinati, veri, genuini</span></li>
+                </ul>
+                <a href="Chi-siamo.html" class="btn-outline" data-i18n="btn_scopri">Scopri la nostra storia</a>
+            </div>
+            <div class="grid-gallery">
+                <img src="images/La Sinica - home (1).jpeg" alt="La Sinica piatto tipico">
+                <img src="images/La Sinica - home (2).jpeg" alt="La Sinica ambiente">
+                <img src="images/La Sinica - home (3).jpeg" alt="La Sinica tavola">
+                <img src="images/La Sinica - home (4).jpeg" alt="La Sinica cucina">
+            </div>
+        </div>
+
+        <div class="home-features">
+            <div class="feature-block">
+                <h3 data-i18n="home_unique_title">🌳 Un luogo unico</h3>
+                <p data-i18n="home_unique_desc">Circondato dal verde, La Sinica è il posto ideale per:</p>
+                <ul>
+                    <li><span class="emoji-icon">🌳</span> <span data-i18n="home_unique1">pranzi e cene in tranquillità</span></li>
+                    <li><span class="emoji-icon">👥</span> <span data-i18n="home_unique2">famiglie e gruppi</span></li>
+                    <li><span class="emoji-icon">🏠</span> <span data-i18n="home_unique3">ambiente rustico e accogliente</span></li>
+                </ul>
+            </div>
+            <div class="feature-block">
+                <h3 data-i18n="home_events_title">🎉 Eventi e feste private</h3>
+                <p data-i18n="home_events_desc">Disponibile per compleanni, lauree, matrimoni, comunioni, cene aziendali, feste a tema. Menu personalizzabili, buffet o servizio alla carta.</p>
+                <a href="Contatti.html" class="btn-outline" style="margin-top: 10px;" data-i18n="contatta">Richiedi informazioni</a>
+            </div>
+            <div class="feature-block">
+                <h3 data-i18n="home_quality_title">⭐ Qualità e convenienza</h3>
+                <p data-i18n="home_quality_desc">Piatti ottimi, porzioni generose, prezzi ancora migliori. La Sinica è il luogo dove si mangia bene, si sta bene e si spende il giusto.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 La Sinica - Ristorante | <span data-i18n="footer_text">Cucina tipica friulana</span></p>
+        <div class="social-icons">
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+            <a href="https://wa.me/393472618470">💬</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    let slideIndex = 0;
+    let slideInterval;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+
+    function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
+    }
+
+    function nextSlide() { slideIndex++; showSlide(slideIndex); resetInterval(); }
+    function prevSlide() { slideIndex--; showSlide(slideIndex); resetInterval(); }
+    function resetInterval() { clearInterval(slideInterval); slideInterval = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 5000); }
+
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    dots.forEach((dot, index) => { dot.addEventListener('click', () => { slideIndex = index; showSlide(slideIndex); resetInterval(); }); });
+    if (slides.length > 0) { showSlide(0); slideInterval = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 5000); }
+</script>
+<style>
+    .btn-outline { background: transparent; border: 2px solid #8b5a2b; color: #8b5a2b; padding: 8px 20px; border-radius: 40px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s; font-size: 0.9rem; }
+    .btn-outline:hover { background: #8b5a2b; color: white; }
+</style>
+</body>
+</html>

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <script>
+        // Nasconde la pagina immediatamente per evitare il flash di lingua sbagliata.
+        // Sarà resa visibile da script.js dopo aver applicato la lingua salvata.
+        document.documentElement.style.visibility = 'hidden';
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Sinica | Ristorante Friuli</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +25,8 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
             <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
-            <li><a href="dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
         </ul>
         <div class="lang-switcher">
@@ -115,32 +121,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-    let slideIndex = 0;
-    let slideInterval;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.getElementById('sliderPrev');
-    const nextBtn = document.getElementById('sliderNext');
-
-    function showSlide(n) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        if (n >= slides.length) slideIndex = 0;
-        if (n < 0) slideIndex = slides.length - 1;
-        slides[slideIndex].classList.add('active');
-        dots[slideIndex].classList.add('active');
-    }
-
-    function nextSlide() { slideIndex++; showSlide(slideIndex); resetInterval(); }
-    function prevSlide() { slideIndex--; showSlide(slideIndex); resetInterval(); }
-    function resetInterval() { clearInterval(slideInterval); slideInterval = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 5000); }
-
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    dots.forEach((dot, index) => { dot.addEventListener('click', () => { slideIndex = index; showSlide(slideIndex); resetInterval(); }); });
-    if (slides.length > 0) { showSlide(0); slideInterval = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 5000); }
-</script>
 <style>
     .btn-outline { background: transparent; border: 2px solid #8b5a2b; color: #8b5a2b; padding: 8px 20px; border-radius: 40px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s; font-size: 0.9rem; }
     .btn-outline:hover { background: #8b5a2b; color: white; }

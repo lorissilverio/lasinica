@@ -5,8 +5,8 @@ const translations = {
     it: {
         nav_home: "Home",
         nav_about: "Chi Siamo",
-        nav_where: "Dove Siamo",
         nav_contacts: "Contatti",
+        nav_where: "Dove Siamo",
         nav_faq: "FAQ",
         hero_title: "Benvenuti a La Sinica",
         hero_slogan: "La Sinica – La tradizione friulana, come a casa.",
@@ -63,19 +63,23 @@ const translations = {
         btn_scopri: "Scopri la nostra storia",
         contatta: "Richiedi informazioni",
         where_title: "Dove Siamo",
-        address_title: "Indirizzo",
-        hours_title: "Orari di apertura",
-        hours_friday: "Venerdì: 17:00–22:00",
-        hours_weekend: "Sabato e Domenica: 11:00–22:00",
-        hours_other: "Altri giorni: su prenotazione",
-        parking_title: "Parcheggio",
-        parking_text: "Parcheggio privato gratuito disponibile per i nostri ospiti"
+        where_subtitle: "Vieni a trovarci nel cuore del Friuli Venezia Giulia",
+        parking_label: "Parcheggio",
+        parking_text: "Ampio parcheggio gratuito disponibile",
+        directions_btn: "Ottieni indicazioni",
+        how_to_reach_title: "Come raggiungerci",
+        reach_car_title: "In auto",
+        reach_car_text: "Dall'autostrada A4 (Venezia–Trieste), uscita Palmanova. Seguire le indicazioni per Bagnaria Arsa, poi per Privano. Ampio parcheggio gratuito.",
+        reach_train_title: "In treno",
+        reach_train_text: "Stazione più vicina: Palmanova o Cervignano del Friuli. Da lì consigliamo di proseguire in taxi o auto a noleggio.",
+        reach_plane_title: "In aereo",
+        reach_plane_text: "Aeroporto di Trieste–Ronchi dei Legionari (ca. 30 min) o Venezia Marco Polo (ca. 1 ora). Noleggio auto disponibile in entrambi gli aeroporti."
     },
     en: {
         nav_home: "Home",
         nav_about: "About Us",
-        nav_where: "Where We Are",
         nav_contacts: "Contacts",
+        nav_where: "Where We Are",
         nav_faq: "FAQ",
         hero_title: "Welcome to La Sinica",
         hero_slogan: "La Sinica – Friulian tradition, just like home.",
@@ -132,19 +136,23 @@ const translations = {
         btn_scopri: "Discover our story",
         contatta: "Request information",
         where_title: "Where We Are",
-        address_title: "Address",
-        hours_title: "Opening Hours",
-        hours_friday: "Friday: 5:00 PM – 10:00 PM",
-        hours_weekend: "Saturday and Sunday: 11:00 AM – 10:00 PM",
-        hours_other: "Other days: by reservation",
-        parking_title: "Parking",
-        parking_text: "Free private parking available for our guests"
+        where_subtitle: "Come and find us in the heart of Friuli Venezia Giulia",
+        parking_label: "Parking",
+        parking_text: "Large free parking available",
+        directions_btn: "Get directions",
+        how_to_reach_title: "How to reach us",
+        reach_car_title: "By car",
+        reach_car_text: "From the A4 motorway (Venice–Trieste), exit at Palmanova. Follow signs for Bagnaria Arsa, then Privano. Free parking available.",
+        reach_train_title: "By train",
+        reach_train_text: "Nearest station: Palmanova or Cervignano del Friuli. We recommend continuing by taxi or rental car.",
+        reach_plane_title: "By plane",
+        reach_plane_text: "Trieste–Ronchi dei Legionari Airport (approx. 30 min) or Venice Marco Polo (approx. 1 hour). Car rental available at both airports."
     },
     de: {
         nav_home: "Startseite",
         nav_about: "Über uns",
-        nav_where: "Wo wir sind",
         nav_contacts: "Kontakt",
+        nav_where: "Anfahrt",
         nav_faq: "FAQ",
         hero_title: "Willkommen bei La Sinica",
         hero_slogan: "La Sinica – Friaulische Tradition, wie zu Hause.",
@@ -200,20 +208,24 @@ const translations = {
         footer_text: "Typische friaulische Küche",
         btn_scopri: "Entdecken Sie unsere Geschichte",
         contatta: "Information anfordern",
-        where_title: "Wo wir sind",
-        address_title: "Adresse",
-        hours_title: "Öffnungszeiten",
-        hours_friday: "Freitag: 17:00–22:00 Uhr",
-        hours_weekend: "Samstag und Sonntag: 11:00–22:00 Uhr",
-        hours_other: "Andere Tage: auf Reservierung",
-        parking_title: "Parkplatz",
-        parking_text: "Kostenloser Privatparkplatz für unsere Gäste"
+        where_title: "Anfahrt",
+        where_subtitle: "Besuchen Sie uns im Herzen von Friaul-Julisch Venetien",
+        parking_label: "Parkplatz",
+        parking_text: "Großer kostenloser Parkplatz vorhanden",
+        directions_btn: "Route berechnen",
+        how_to_reach_title: "So finden Sie uns",
+        reach_car_title: "Mit dem Auto",
+        reach_car_text: "Von der Autobahn A4 (Venedig–Triest), Ausfahrt Palmanova. Richtung Bagnaria Arsa, dann Privano folgen. Kostenloser Parkplatz vorhanden.",
+        reach_train_title: "Mit dem Zug",
+        reach_train_text: "Nächster Bahnhof: Palmanova oder Cervignano del Friuli. Von dort empfehlen wir Taxi oder Mietwagen.",
+        reach_plane_title: "Mit dem Flugzeug",
+        reach_plane_text: "Flughafen Triest–Ronchi dei Legionari (ca. 30 Min.) oder Venedig Marco Polo (ca. 1 Std.). Mietwagen an beiden Flughäfen verfügbar."
     },
     fr: {
         nav_home: "Accueil",
         nav_about: "Qui sommes-nous",
-        nav_where: "Où sommes-nous",
         nav_contacts: "Contact",
+        nav_where: "Nous Trouver",
         nav_faq: "FAQ",
         hero_title: "Bienvenue à La Sinica",
         hero_slogan: "La Sinica – La tradition frioulane, comme à la maison.",
@@ -269,14 +281,18 @@ const translations = {
         footer_text: "Cuisine typique du Frioul",
         btn_scopri: "Découvrez notre histoire",
         contatta: "Demander des informations",
-        where_title: "Où sommes-nous",
-        address_title: "Adresse",
-        hours_title: "Horaires d'ouverture",
-        hours_friday: "Vendredi: 17h00–22h00",
-        hours_weekend: "Samedi et Dimanche: 11h00–22h00",
-        hours_other: "Autres jours: sur réservation",
-        parking_title: "Parking",
-        parking_text: "Parking privé gratuit disponible pour nos hôtes"
+        where_title: "Nous Trouver",
+        where_subtitle: "Venez nous rendre visite au cœur du Frioul-Vénétie Julienne",
+        parking_label: "Parking",
+        parking_text: "Grand parking gratuit disponible",
+        directions_btn: "Obtenir l'itinéraire",
+        how_to_reach_title: "Comment nous rejoindre",
+        reach_car_title: "En voiture",
+        reach_car_text: "Depuis l'autoroute A4 (Venise–Trieste), sortie Palmanova. Suivre les indications pour Bagnaria Arsa, puis Privano. Parking gratuit.",
+        reach_train_title: "En train",
+        reach_train_text: "Gare la plus proche : Palmanova ou Cervignano del Friuli. Nous recommandons de continuer en taxi ou en voiture de location.",
+        reach_plane_title: "En avion",
+        reach_plane_text: "Aéroport de Trieste–Ronchi dei Legionari (env. 30 min) ou Venise Marco Polo (env. 1 h). Location de voitures disponible dans les deux aéroports."
     }
 };
 
@@ -336,6 +352,7 @@ function loadFAQs(lang) {
         container.appendChild(faqItem);
     });
     
+    // Aggiungi event listener per le nuove domande
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', function() {
             const answer = this.nextElementSibling;
@@ -354,19 +371,13 @@ function loadFAQs(lang) {
 let currentLang = 'it';
 
 function applyLanguage(lang) {
-    if (!translations[lang]) return;
-    
     console.log('Applicando lingua:', lang);
     
     // Traduci tutti gli elementi con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = translations[lang][key];
-            } else {
-                el.innerHTML = translations[lang][key];
-            }
+            el.innerHTML = translations[lang][key];
         }
     });
     
@@ -386,13 +397,17 @@ function applyLanguage(lang) {
     currentLang = lang;
 }
 
+// ============================================
+// FUNZIONE PER CAMBIARE LINGUA
+// ============================================
 function setLanguage(lang) {
     if (!translations[lang]) return;
     applyLanguage(lang);
     localStorage.setItem('lasinica_lang', lang);
-    console.log('Lingua salvata:', lang);
+    console.log('Lingua cambiata in:', lang);
 }
 
+// Rendi disponibile globalmente
 window.setLanguage = setLanguage;
 
 // ============================================
@@ -432,6 +447,24 @@ function initSlider() {
             resetInterval();
         });
     });
+
+    // Touch swipe support
+    const sliderEl = document.querySelector('.hero-slider');
+    if (sliderEl) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        sliderEl.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        sliderEl.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        }, { passive: true });
+    }
     
     showSlide(0);
     slideInterval = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 5000);
@@ -444,72 +477,55 @@ function initMobileMenu() {
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
     if (mobileBtn && navLinks) {
-        mobileBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('show');
+        mobileBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('show');
+            mobileBtn.textContent = isOpen ? '✕' : '☰';
         });
-        
-        // Chiudi menu quando si clicca su un link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+
+        // Chiudi menu cliccando su un link
+        navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 800) {
-                    navLinks.classList.remove('show');
-                }
+                navLinks.classList.remove('show');
+                mobileBtn.textContent = '☰';
             });
         });
-        
-        // Chiudi menu quando si clicca fuori
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 800) {
-                if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
-                    navLinks.classList.remove('show');
-                }
+
+        // Chiudi menu cliccando fuori
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && e.target !== mobileBtn) {
+                navLinks.classList.remove('show');
+                mobileBtn.textContent = '☰';
             }
-        });
-        
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
         });
     }
 }
 
 // ============================================
-// INIZIALIZZAZIONE - CARICA LINGUA SALVATA
+// INIZIALIZZAZIONE
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM caricato - inizializzazione...');
-    
     // Inizializza menu mobile
     initMobileMenu();
     
-    // Inizializza slider (solo home page)
+    // Inizializza slider (solo se esistono gli elementi)
     initSlider();
     
-    // RECUPERA LINGUA SALVATA O USA ITALIANO
-    const savedLang = localStorage.getItem('lasinica_lang');
-    const defaultLang = 'it';
-    const langToUse = (savedLang && translations[savedLang]) ? savedLang : defaultLang;
+    // Recupera lingua salvata o usa italiano
+    const savedLang = localStorage.getItem('lasinica_lang') || 'it';
     
-    console.log('Lingua salvata:', savedLang);
-    console.log('Lingua da applicare:', langToUse);
+    // Applica la lingua (include anche FAQ)
+    applyLanguage(savedLang);
+
+    // Rivela la pagina (era nascosta per evitare flash di lingua sbagliata)
+    document.documentElement.style.visibility = 'visible';
     
-    // APPLICA LA LINGUA
-    applyLanguage(langToUse);
-    
-    // COLLEGA I BOTTONI LINGUA
-    const langBtns = document.querySelectorAll('.lang-btn');
-    console.log('Bottoni lingua trovati:', langBtns.length);
-    
-    langBtns.forEach(btn => {
-        // Rimuovi eventuali listener precedenti
-        btn.removeEventListener('click', btn._listener);
-        // Crea nuovo listener
-        const listener = function(e) {
+    // Collega i bottoni lingua
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
-            console.log('Click su bottone:', lang);
             setLanguage(lang);
-        };
-        btn.addEventListener('click', listener);
-        btn._listener = listener;
+        });
     });
 });

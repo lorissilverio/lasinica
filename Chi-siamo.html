@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <script>
+        // Nasconde la pagina immediatamente per evitare il flash di lingua sbagliata.
+        // Sarà resa visibile da script.js dopo aver applicato la lingua salvata.
+        document.documentElement.style.visibility = 'hidden';
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi Siamo | La Sinica</title>
@@ -20,8 +25,8 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
             <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
-            <li><a href="dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
         </ul>
         <div class="lang-switcher">

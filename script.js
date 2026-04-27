@@ -5,6 +5,7 @@ const translations = {
     it: {
         nav_home: "Home",
         nav_about: "Chi Siamo",
+        nav_where: "Dove Siamo",
         nav_contacts: "Contatti",
         nav_faq: "FAQ",
         hero_title: "Benvenuti a La Sinica",
@@ -60,11 +61,20 @@ const translations = {
         faq_subtitle: "Risposte alle domande più frequenti",
         footer_text: "Cucina tipica friulana",
         btn_scopri: "Scopri la nostra storia",
-        contatta: "Richiedi informazioni"
+        contatta: "Richiedi informazioni",
+        where_title: "Dove Siamo",
+        address_title: "Indirizzo",
+        hours_title: "Orari di apertura",
+        hours_friday: "Venerdì: 17:00–22:00",
+        hours_weekend: "Sabato e Domenica: 11:00–22:00",
+        hours_other: "Altri giorni: su prenotazione",
+        parking_title: "Parcheggio",
+        parking_text: "Parcheggio privato gratuito disponibile per i nostri ospiti"
     },
     en: {
         nav_home: "Home",
         nav_about: "About Us",
+        nav_where: "Where We Are",
         nav_contacts: "Contacts",
         nav_faq: "FAQ",
         hero_title: "Welcome to La Sinica",
@@ -120,11 +130,20 @@ const translations = {
         faq_subtitle: "Answers to frequently asked questions",
         footer_text: "Typical Friulian cuisine",
         btn_scopri: "Discover our story",
-        contatta: "Request information"
+        contatta: "Request information",
+        where_title: "Where We Are",
+        address_title: "Address",
+        hours_title: "Opening Hours",
+        hours_friday: "Friday: 5:00 PM – 10:00 PM",
+        hours_weekend: "Saturday and Sunday: 11:00 AM – 10:00 PM",
+        hours_other: "Other days: by reservation",
+        parking_title: "Parking",
+        parking_text: "Free private parking available for our guests"
     },
     de: {
         nav_home: "Startseite",
         nav_about: "Über uns",
+        nav_where: "Wo wir sind",
         nav_contacts: "Kontakt",
         nav_faq: "FAQ",
         hero_title: "Willkommen bei La Sinica",
@@ -180,11 +199,20 @@ const translations = {
         faq_subtitle: "Antworten auf häufig gestellte Fragen",
         footer_text: "Typische friaulische Küche",
         btn_scopri: "Entdecken Sie unsere Geschichte",
-        contatta: "Information anfordern"
+        contatta: "Information anfordern",
+        where_title: "Wo wir sind",
+        address_title: "Adresse",
+        hours_title: "Öffnungszeiten",
+        hours_friday: "Freitag: 17:00–22:00 Uhr",
+        hours_weekend: "Samstag und Sonntag: 11:00–22:00 Uhr",
+        hours_other: "Andere Tage: auf Reservierung",
+        parking_title: "Parkplatz",
+        parking_text: "Kostenloser Privatparkplatz für unsere Gäste"
     },
     fr: {
         nav_home: "Accueil",
         nav_about: "Qui sommes-nous",
+        nav_where: "Où sommes-nous",
         nav_contacts: "Contact",
         nav_faq: "FAQ",
         hero_title: "Bienvenue à La Sinica",
@@ -240,7 +268,15 @@ const translations = {
         faq_subtitle: "Réponses aux questions fréquentes",
         footer_text: "Cuisine typique du Frioul",
         btn_scopri: "Découvrez notre histoire",
-        contatta: "Demander des informations"
+        contatta: "Demander des informations",
+        where_title: "Où sommes-nous",
+        address_title: "Adresse",
+        hours_title: "Horaires d'ouverture",
+        hours_friday: "Vendredi: 17h00–22h00",
+        hours_weekend: "Samedi et Dimanche: 11h00–22h00",
+        hours_other: "Autres jours: sur réservation",
+        parking_title: "Parking",
+        parking_text: "Parking privé gratuit disponible pour nos hôtes"
     }
 };
 
@@ -300,7 +336,6 @@ function loadFAQs(lang) {
         container.appendChild(faqItem);
     });
     
-    // Aggiungi event listener per le nuove domande
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', function() {
             const answer = this.nextElementSibling;
@@ -319,13 +354,19 @@ function loadFAQs(lang) {
 let currentLang = 'it';
 
 function applyLanguage(lang) {
+    if (!translations[lang]) return;
+    
     console.log('Applicando lingua:', lang);
     
     // Traduci tutti gli elementi con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
         }
     });
     
@@ -345,17 +386,13 @@ function applyLanguage(lang) {
     currentLang = lang;
 }
 
-// ============================================
-// FUNZIONE PER CAMBIARE LINGUA
-// ============================================
 function setLanguage(lang) {
     if (!translations[lang]) return;
     applyLanguage(lang);
     localStorage.setItem('lasinica_lang', lang);
-    console.log('Lingua cambiata in:', lang);
+    console.log('Lingua salvata:', lang);
 }
 
-// Rendi disponibile globalmente
 window.setLanguage = setLanguage;
 
 // ============================================
@@ -410,37 +447,69 @@ function initMobileMenu() {
         mobileBtn.addEventListener('click', function() {
             navLinks.classList.toggle('show');
         });
+        
+        // Chiudi menu quando si clicca su un link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 800) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+        
+        // Chiudi menu quando si clicca fuori
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 800) {
+                if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+                    navLinks.classList.remove('show');
+                }
+            }
+        });
+        
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
     }
 }
 
 // ============================================
-// INIZIALIZZAZIONE
+// INIZIALIZZAZIONE - CARICA LINGUA SALVATA
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM caricato');
+    console.log('DOM caricato - inizializzazione...');
     
     // Inizializza menu mobile
     initMobileMenu();
     
-    // Inizializza slider (solo se esistono gli elementi)
+    // Inizializza slider (solo home page)
     initSlider();
     
-    // Recupera lingua salvata o usa italiano
-    const savedLang = localStorage.getItem('lasinica_lang') || 'it';
+    // RECUPERA LINGUA SALVATA O USA ITALIANO
+    const savedLang = localStorage.getItem('lasinica_lang');
+    const defaultLang = 'it';
+    const langToUse = (savedLang && translations[savedLang]) ? savedLang : defaultLang;
     
-    // Applica la lingua (include anche FAQ)
-    applyLanguage(savedLang);
+    console.log('Lingua salvata:', savedLang);
+    console.log('Lingua da applicare:', langToUse);
     
-    // Collega i bottoni lingua
+    // APPLICA LA LINGUA
+    applyLanguage(langToUse);
+    
+    // COLLEGA I BOTTONI LINGUA
     const langBtns = document.querySelectorAll('.lang-btn');
     console.log('Bottoni lingua trovati:', langBtns.length);
     
     langBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        // Rimuovi eventuali listener precedenti
+        btn.removeEventListener('click', btn._listener);
+        // Crea nuovo listener
+        const listener = function(e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             console.log('Click su bottone:', lang);
             setLanguage(lang);
-        });
+        };
+        btn.addEventListener('click', listener);
+        btn._listener = listener;
     });
 });

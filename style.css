@@ -12,6 +12,7 @@ body {
     background-color: #fefaf5;
     color: #2c2b28;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 .container {
@@ -501,8 +502,25 @@ footer {
 }
 
 /* ============================================ */
-/* RESPONSIVE DESIGN */
+/* OTTIMIZZAZIONI MOBILE */
 /* ============================================ */
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn-reserve, 
+.lang-btn, 
+.mobile-menu-btn,
+.slider-prev,
+.slider-next,
+.dot,
+.faq-question,
+.social-icons a {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(139, 90, 43, 0.2);
+}
+
 @media (max-width: 800px) {
     .container {
         padding: 0 20px;
@@ -566,6 +584,167 @@ footer {
         grid-template-columns: 1fr;
         gap: 25px;
     }
+
+    header {
+        padding: 12px 0;
+    }
+    
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo p {
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
+    
+    .lang-switcher {
+        gap: 4px;
+        padding: 4px 8px;
+    }
+    
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+
+    .hero-slider {
+        min-height: 60vh;
+    }
+    
+    .hero-overlay {
+        padding: 60px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.6rem;
+        padding: 0 16px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+    
+    .btn-reserve {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .home-intro {
+        padding: 40px 0;
+    }
+    
+    .lead-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .grid-gallery {
+        gap: 12px;
+    }
+    
+    .grid-gallery img {
+        height: 160px;
+    }
+
+    .home-features {
+        margin-top: 40px;
+        gap: 20px;
+    }
+    
+    .feature-block {
+        padding: 20px;
+    }
+    
+    .feature-block h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid-2col {
+        gap: 30px;
+    }
+    
+    .grid-2col h3 {
+        font-size: 1.4rem;
+    }
+    
+    .about-main-img {
+        min-height: 200px;
+        border-radius: 16px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .value-card {
+        padding: 20px 16px;
+    }
+    
+    .value-card i {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        padding: 25px 20px;
+        border-radius: 24px;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+    
+    .map-container iframe {
+        height: 250px;
+        border-radius: 16px;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+    
+    .faq-answer {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 24px 0;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 24px;
+    }
+
+    .lang-btn,
+    .slider-prev,
+    .slider-next,
+    .dot,
+    .faq-question {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .faq-question {
+        min-height: 50px;
+    }
+    
+    .social-icons a {
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -591,5 +770,117 @@ footer {
     
     .feature-block h3 {
         font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-tagline {
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .grid-gallery img {
+        height: 140px;
+    }
+    
+    .btn-reserve {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-outline {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .hero-slider {
+        min-height: 100vh;
+    }
+    
+    .hero-overlay {
+        padding: 40px 0;
+    }
+    
+    .chi-siamo-hero {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    input, select, textarea {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        transition: all 0.3s ease;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ============================================ */
+/* STILI PER PAGINA DOVE SIAMO */
+/* ============================================ */
+.where-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 24px;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: #8b5a2b;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #3b2a1f;
+}
+
+.info-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+    .where-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .info-card {
+        padding: 20px;
     }
 }

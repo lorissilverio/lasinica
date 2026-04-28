@@ -73,7 +73,14 @@ const translations = {
         reach_train_title: "In treno",
         reach_train_text: "Stazione più vicina: Palmanova o Cervignano del Friuli. Da lì consigliamo di proseguire in taxi o auto a noleggio.",
         reach_plane_title: "In aereo",
-        reach_plane_text: "Aeroporto di Trieste–Ronchi dei Legionari (ca. 30 min) o Venezia Marco Polo (ca. 1 ora). Noleggio auto disponibile in entrambi gli aeroporti."
+        reach_plane_text: "Aeroporto di Trieste–Ronchi dei Legionari (ca. 30 min) o Venezia Marco Polo (ca. 1 ora). Noleggio auto disponibile in entrambi gli aeroporti.",
+        nearby_title: "Nei dintorni",
+        nearby_outlet_title: "Palmanova Designer Village",
+        nearby_outlet_text: "A soli 2 km dal ristorante si trova il <a href='https://www.palmanovadesignervillage.com/' target='_blank' rel='noopener'>Palmanova Designer Village</a>, l'outlet di riferimento del Friuli Venezia Giulia.",
+        nearby_bike_title: "Pista Ciclabile Palmanova–Grado",
+        nearby_bike_text: "Il ristorante si trova direttamente sulla pista ciclabile che collega Palmanova a Grado: la sosta perfetta per una pausa durante il percorso.",
+        nearby_palmanova_title: "Centro Storico di Palmanova",
+        nearby_palmanova_text: "A soli 2 km dal ristorante sorge <a href='https://www.visitpalmanova.it/' target='_blank' rel='noopener'>Palmanova</a>, la città stellata patrimonio UNESCO, un gioiello rinascimentale unico al mondo."
     },
     en: {
         nav_home: "Home",
@@ -146,7 +153,14 @@ const translations = {
         reach_train_title: "By train",
         reach_train_text: "Nearest station: Palmanova or Cervignano del Friuli. We recommend continuing by taxi or rental car.",
         reach_plane_title: "By plane",
-        reach_plane_text: "Trieste–Ronchi dei Legionari Airport (approx. 30 min) or Venice Marco Polo (approx. 1 hour). Car rental available at both airports."
+        reach_plane_text: "Trieste–Ronchi dei Legionari Airport (approx. 30 min) or Venice Marco Polo (approx. 1 hour). Car rental available at both airports.",
+        nearby_title: "Nearby",
+        nearby_outlet_title: "Palmanova Designer Village",
+        nearby_outlet_text: "Just 2 km from the restaurant you'll find the <a href='https://www.palmanovadesignervillage.com/' target='_blank' rel='noopener'>Palmanova Designer Village</a>, the main outlet center of Friuli Venezia Giulia.",
+        nearby_bike_title: "Palmanova–Grado Cycle Path",
+        nearby_bike_text: "The restaurant is located directly on the cycle path connecting Palmanova to Grado — the perfect stop for a break along the way.",
+        nearby_palmanova_title: "Palmanova Historic Center",
+        nearby_palmanova_text: "Just 2 km away stands <a href='https://www.visitpalmanova.it/' target='_blank' rel='noopener'>Palmanova</a>, a UNESCO World Heritage star-shaped city, a unique Renaissance masterpiece."
     },
     de: {
         nav_home: "Startseite",
@@ -219,7 +233,14 @@ const translations = {
         reach_train_title: "Mit dem Zug",
         reach_train_text: "Nächster Bahnhof: Palmanova oder Cervignano del Friuli. Von dort empfehlen wir Taxi oder Mietwagen.",
         reach_plane_title: "Mit dem Flugzeug",
-        reach_plane_text: "Flughafen Triest–Ronchi dei Legionari (ca. 30 Min.) oder Venedig Marco Polo (ca. 1 Std.). Mietwagen an beiden Flughäfen verfügbar."
+        reach_plane_text: "Flughafen Triest–Ronchi dei Legionari (ca. 30 Min.) oder Venedig Marco Polo (ca. 1 Std.). Mietwagen an beiden Flughäfen verfügbar.",
+        nearby_title: "In der Umgebung",
+        nearby_outlet_title: "Palmanova Designer Village",
+        nearby_outlet_text: "Nur 2 km vom Restaurant entfernt befindet sich das <a href='https://www.palmanovadesignervillage.com/' target='_blank' rel='noopener'>Palmanova Designer Village</a>, das führende Outlet-Zentrum in Friaul-Julisch Venetien.",
+        nearby_bike_title: "Radweg Palmanova–Grado",
+        nearby_bike_text: "Das Restaurant liegt direkt am Radweg, der Palmanova mit Grado verbindet – die perfekte Pause auf dem Weg.",
+        nearby_palmanova_title: "Historisches Zentrum von Palmanova",
+        nearby_palmanova_text: "Nur 2 km entfernt liegt <a href='https://www.visitpalmanova.it/' target='_blank' rel='noopener'>Palmanova</a>, die sternförmige UNESCO-Welterbestadt, ein einzigartiges Renaissance-Meisterwerk."
     },
     fr: {
         nav_home: "Accueil",
@@ -292,7 +313,14 @@ const translations = {
         reach_train_title: "En train",
         reach_train_text: "Gare la plus proche : Palmanova ou Cervignano del Friuli. Nous recommandons de continuer en taxi ou en voiture de location.",
         reach_plane_title: "En avion",
-        reach_plane_text: "Aéroport de Trieste–Ronchi dei Legionari (env. 30 min) ou Venise Marco Polo (env. 1 h). Location de voitures disponible dans les deux aéroports."
+        reach_plane_text: "Aéroport de Trieste–Ronchi dei Legionari (env. 30 min) ou Venise Marco Polo (env. 1 h). Location de voitures disponible dans les deux aéroports.",
+        nearby_title: "Aux alentours",
+        nearby_outlet_title: "Palmanova Designer Village",
+        nearby_outlet_text: "À seulement 2 km du restaurant se trouve le <a href='https://www.palmanovadesignervillage.com/' target='_blank' rel='noopener'>Palmanova Designer Village</a>, l'outlet de référence du Frioul-Vénétie Julienne.",
+        nearby_bike_title: "Piste Cyclable Palmanova–Grado",
+        nearby_bike_text: "Le restaurant se trouve directement sur la piste cyclable reliant Palmanova à Grado : l'arrêt parfait pour une pause en chemin.",
+        nearby_palmanova_title: "Centre Historique de Palmanova",
+        nearby_palmanova_text: "À seulement 2 km se dresse <a href='https://www.visitpalmanova.it/' target='_blank' rel='noopener'>Palmanova</a>, la cité étoilée classée au patrimoine mondial de l'UNESCO, un joyau Renaissance unique au monde."
     }
 };
 

@@ -788,28 +788,32 @@ const faqData = {
         { q: "È possibile organizzare eventi privati?", a: "Sì, organizziamo matrimoni, comunioni, lauree, compleanni e cene aziendali. Contattaci per un preventivo personalizzato." },
         { q: "Accettate prenotazioni per gruppi?", a: "Certamente! Siamo attrezzati per accogliere gruppi numerosi. Consigliamo la prenotazione con almeno una settimana di anticipo." },
         { q: "I piatti sono adatti a celiaci o intolleranti?", a: "Abbiamo opzioni senza glutine e possiamo adattare molti piatti. Avvisateci al momento della prenotazione." },
-        { q: "Avete parcheggio?", a: "Sì, disponiamo di un ampio parcheggio privato gratuito per i nostri ospiti." }
+        { q: "Avete parcheggio?", a: "Sì, disponiamo di un ampio parcheggio privato gratuito per i nostri ospiti." },
+        { q: "È consentito l'accesso agli animali domestici all'interno del locale?", a: "Siamo lieti di accogliere i vostri compagni a quattro zampe. Presso la nostra struttura gli animali domestici sono i benvenuti, a condizione che il loro comportamento garantisca la tranquillità e il comfort di tutti gli altri ospiti. Qualora aveste necessità particolari o desideraste una ciotola d'acqua per il vostro cane, non esitate a farne richiesta al nostro staff al vostro arrivo." }
     ],
     en: [
         { q: "What are your opening hours?", a: "Friday from 5:00 PM to 10:00 PM. Saturday and Sunday from 11:00 AM to 10:00 PM. Other days (Monday, Tuesday, Wednesday, Thursday) by reservation only." },
         { q: "Can I organize private events?", a: "Yes, we organize weddings, communions, graduations, birthdays and corporate dinners. Contact us for a personalized quote." },
         { q: "Do you accept group reservations?", a: "Certainly! We are equipped to accommodate large groups. We recommend booking at least one week in advance." },
         { q: "Are the dishes suitable for celiacs or intolerants?", a: "We have gluten-free options and can adapt many dishes. Let us know at the time of booking." },
-        { q: "Do you have parking?", a: "Yes, we have a large free private parking for our guests." }
+        { q: "Do you have parking?", a: "Yes, we have a large free private parking for our guests." },
+        { q: "Are pets allowed inside the restaurant?", a: "We are happy to welcome your four-legged companions. Pets are welcome at our establishment, provided that their behaviour ensures the peace and comfort of all other guests. Should you have any particular needs or wish to have a water bowl for your dog, please do not hesitate to ask our staff upon arrival." }
     ],
     de: [
         { q: "Was sind Ihre Öffnungszeiten?", a: "Freitag von 17:00 bis 22:00 Uhr. Samstag und Sonntag von 11:00 bis 22:00 Uhr. Andere Tage (Montag, Dienstag, Mittwoch, Donnerstag) nur auf Reservierung." },
         { q: "Kann ich private Veranstaltungen organisieren?", a: "Ja, wir organisieren Hochzeiten, Kommunionen, Abschlussfeiern, Geburtstage und Firmenessen. Kontaktieren Sie uns für ein persönliches Angebot." },
         { q: "Akzeptieren Sie Gruppenreservierungen?", a: "Auf jeden Fall! Wir sind darauf eingerichtet, große Gruppen zu bewirten. Wir empfehlen eine Reservierung mindestens eine Woche im Voraus." },
         { q: "Sind die Gerichte für Zöliakiepatienten geeignet?", a: "Wir haben glutenfreie Optionen und können viele Gerichte anpassen. Teilen Sie uns dies bei der Reservierung mit." },
-        { q: "Gibt es Parkplätze?", a: "Ja, wir haben einen großen kostenlosen Privatparkplatz für unsere Gäste." }
+        { q: "Gibt es Parkplätze?", a: "Ja, wir haben einen großen kostenlosen Privatparkplatz für unsere Gäste." },
+        { q: "Sind Haustiere im Lokal erlaubt?", a: "Wir heißen Ihre vierbeinigen Begleiter herzlich willkommen. Haustiere sind in unserem Betrieb willkommen, sofern ihr Verhalten die Ruhe und den Komfort aller anderen Gäste gewährleistet. Sollten Sie besondere Bedürfnisse haben oder eine Wasserschüssel für Ihren Hund wünschen, zögern Sie nicht, unser Personal bei Ihrer Ankunft darum zu bitten." }
     ],
     fr: [
         { q: "Quels sont vos horaires d'ouverture?", a: "Vendredi de 17h00 à 22h00. Samedi et dimanche de 11h00 à 22h00. Les autres jours (lundi, mardi, mercredi, jeudi) sur réservation uniquement." },
         { q: "Puis-je organiser des événements privés?", a: "Oui, nous organisons mariages, communions, remises de diplômes, anniversaires et dîners d'entreprise. Contactez-nous pour un devis personnalisé." },
         { q: "Acceptez-vous les réservations de groupes?", a: "Certainement! Nous sommes équipés pour accueillir de grands groupes. Nous recommandons de réserver au moins une semaine à l'avance." },
         { q: "Les plats sont-ils adaptés aux cœliaques?", a: "Nous avons des options sans gluten et pouvons adapter de nombreux plats. Prévenez-nous au moment de la réservation." },
-        { q: "Avez-vous un parking?", a: "Oui, nous disposons d'un grand parking privé gratuit pour nos hôtes." }
+        { q: "Avez-vous un parking?", a: "Oui, nous disposons d'un grand parking privé gratuit pour nos hôtes." },
+        { q: "Les animaux de compagnie sont-ils autorisés dans l'établissement?", a: "Nous sommes ravis d'accueillir vos compagnons à quatre pattes. Les animaux de compagnie sont les bienvenus dans notre établissement, à condition que leur comportement garantisse la tranquillité et le confort de tous les autres clients. Si vous avez des besoins particuliers ou souhaitez un bol d'eau pour votre chien, n'hésitez pas à en faire la demande à notre personnel à votre arrivée." }
     ]
 };
 

@@ -2,8 +2,6 @@
 <html lang="it">
 <head>
     <script>
-        // Nasconde la pagina immediatamente per evitare il flash di lingua sbagliata.
-        // Sarà resa visibile da script.js dopo aver applicato la lingua salvata.
         document.documentElement.style.visibility = 'hidden';
     </script>
     <meta charset="UTF-8">
@@ -12,6 +10,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border: 1px solid #f0e4d8;
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: #d9b48b;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #3b2a1f;
+            background: #fffaf5;
+            transition: background 0.2s;
+        }
+        .faq-question:hover {
+            background: #fef5ec;
+        }
+        .faq-question .faq-icon {
+            font-size: 0.8rem;
+            color: #8b5a2b;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 25px 25px 25px;
+            color: #5a4a3a;
+            line-height: 1.7;
+            background: white;
+            border-top: 1px solid #f0e4d8;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+        .faq-answer p {
+            margin-top: 20px;
+        }
+        .faq-note {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: #f5ede4;
+            border-radius: 30px;
+        }
+        .faq-note a {
+            color: #8b5a2b;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .faq-note a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .faq-question {
+                padding: 16px 18px;
+                font-size: 0.95rem;
+            }
+            .faq-answer {
+                padding: 0 18px 18px 18px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -25,6 +101,8 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
             <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
             <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
             <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
@@ -43,8 +121,12 @@
         <div class="container">
             <h2 class="section-title" data-i18n="faq_title">FAQ</h2>
             <p class="section-subtitle" data-i18n="faq_subtitle">Risposte alle domande più frequenti</p>
-            <div class="faq-grid" id="faqContainer">
-                <!-- Le FAQ vengono caricate dinamicamente da script.js -->
+            <div class="faq-container" id="faqContainer"></div>
+            <div class="faq-note">
+                <i class="fas fa-envelope" style="margin-right: 10px; color: #8b5a2b;"></i>
+                <span>Non hai trovato la risposta che cercavi? </span>
+                <a href="Contatti.html" data-i18n="contatta">Contattaci</a>
+                <span> - saremo felici di aiutarti!</span>
             </div>
         </div>
     </section>
@@ -62,33 +144,5 @@
 </footer>
 
 <script src="script.js"></script>
-<style>
-    .faq-question {
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0;
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-    .faq-answer {
-        display: none;
-        padding: 10px 0 20px 0;
-        color: #555;
-        line-height: 1.6;
-        border-bottom: 1px solid #e6d9ce;
-    }
-    .faq-answer.show {
-        display: block;
-    }
-    .faq-item {
-        margin-bottom: 5px;
-    }
-    .faq-icon {
-        transition: transform 0.2s;
-        font-size: 0.8rem;
-    }
-</style>
 </body>
 </html>

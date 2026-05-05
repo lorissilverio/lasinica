@@ -2,8 +2,6 @@
 <html lang="it">
 <head>
     <script>
-        // Nasconde la pagina immediatamente per evitare il flash di lingua sbagliata.
-        // Sarà resa visibile da script.js dopo aver applicato la lingua salvata.
         document.documentElement.style.visibility = 'hidden';
     </script>
     <meta charset="UTF-8">
@@ -25,6 +23,8 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
             <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
             <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
             <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
@@ -39,8 +39,6 @@
 </header>
 
 <main>
-
-    <!-- Hero -->
     <section class="dove-siamo-hero">
         <div class="container">
             <h2 class="section-title" data-i18n="where_title">Dove Siamo</h2>
@@ -48,11 +46,9 @@
         </div>
     </section>
 
-    <!-- Indirizzo + Info -->
     <section class="page-section">
         <div class="container">
             <div class="dove-grid">
-
                 <div class="dove-info-card">
                     <div class="dove-info-item">
                         <div class="dove-info-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -61,7 +57,6 @@
                             <p data-i18n="address_text">Via Sinica 12, Privano - Bagnaria Arsa (UD), 33050</p>
                         </div>
                     </div>
-
                     <div class="dove-info-item">
                         <div class="dove-info-icon"><i class="far fa-clock"></i></div>
                         <div>
@@ -69,7 +64,6 @@
                             <p data-i18n="hours_text">Ven 17:00–22:00 | Sab-Dom 11:00–22:00 | Altri giorni su prenotazione</p>
                         </div>
                     </div>
-
                     <div class="dove-info-item">
                         <div class="dove-info-icon"><i class="fas fa-car"></i></div>
                         <div>
@@ -77,37 +71,25 @@
                             <p data-i18n="parking_text">Ampio parcheggio gratuito disponibile</p>
                         </div>
                     </div>
-
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Sinica+12+Bagnaria+Arsa" 
-                       target="_blank" class="btn-outline dove-btn-directions" data-i18n="directions_btn">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Sinica+12+Bagnaria+Arsa" target="_blank" class="btn-outline dove-btn-directions" data-i18n="directions_btn">
                         <i class="fas fa-route"></i> Ottieni indicazioni
                     </a>
                 </div>
-
                 <div class="dove-map">
-                    <iframe 
-                        src="https://www.google.com/maps?q=Via+Sinica+12+Bagnaria+Arsa&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; border-radius: 24px; min-height: 420px;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps?q=Via+Sinica+12+Bagnaria+Arsa&output=embed" width="100%" height="100%" style="border:0; border-radius: 24px; min-height: 420px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Nei dintorni -->
-    <section class="page-section"> 
+    <section class="page-section">
         <div class="container">
             <h3 class="text-center" data-i18n="nearby_title">Nei dintorni</h3>
             <div class="reach-grid">
                 <div class="reach-card">
                     <img src="images/outlet.png" alt="Palmanova Designer Village" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
                     <h4 data-i18n="nearby_outlet_title">Palmanova Designer Village</h4>
-                    <p data-i18n="nearby_outlet_text">A soli 2 km dal ristorante si trova il <a href="https://www.palmanovadesignervillage.com/" target="_blank" rel="noopener">Palmanova Designer Village</a>, l'outlet di riferimento del Friuli Venezia Giulia.</p>
+                    <p data-i18n="nearby_outlet_text">A soli 2 km dal ristorante si trova il Palmanova Designer Village, l'outlet di riferimento del Friuli Venezia Giulia.</p>
                 </div>
                 <div class="reach-card">
                     <img src="images/ciclabile.png" alt="Pista Ciclabile Palmanova–Grado" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
@@ -117,13 +99,12 @@
                 <div class="reach-card">
                     <img src="images/palmanova.png" alt="Centro Storico di Palmanova" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
                     <h4 data-i18n="nearby_palmanova_title">Centro Storico di Palmanova</h4>
-                    <p data-i18n="nearby_palmanova_text">A soli 2 km dal ristorante sorge <a href="https://www.visitpalmanova.it/" target="_blank" rel="noopener">Palmanova</a>, la città stellata patrimonio UNESCO, un gioiello rinascimentale unico al mondo.</p>
+                    <p data-i18n="nearby_palmanova_text">A soli 2 km dal ristorante sorge Palmanova, la città stellata patrimonio UNESCO, un gioiello rinascimentale unico al mondo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Come raggiungerci -->
     <section class="page-section bg-cream">
         <div class="container">
             <h3 class="text-center" data-i18n="how_to_reach_title">Come raggiungerci</h3>
@@ -146,7 +127,6 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <footer>

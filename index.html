@@ -2,8 +2,6 @@
 <html lang="it">
 <head>
     <script>
-        // Nasconde la pagina immediatamente per evitare il flash di lingua sbagliata.
-        // Sarà resa visibile da script.js dopo aver applicato la lingua salvata.
         document.documentElement.style.visibility = 'hidden';
     </script>
     <meta charset="UTF-8">
@@ -25,6 +23,8 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
             <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
             <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
             <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
             <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
@@ -41,11 +41,8 @@
 <main>
     <section class="hero-slider">
         <div class="slideshow-container">
-            <div class="slide active" style="background-image: url('images/La Sinica - home (1).jpeg');"></div>
-            <div class="slide" style="background-image: url('images/La Sinica - home (2).jpeg');"></div>
-            <div class="slide" style="background-image: url('images/La Sinica - home (3).jpeg');"></div>
+            <div class="slide active" style="background-image: url('images/La Sinica - home (3).jpeg');"></div>
             <div class="slide" style="background-image: url('images/La Sinica - home (4).jpeg');"></div>
-            <div class="slide" style="background-image: url('images/La Sinica - home (5).jpeg');"></div>
         </div>
         <div class="hero-overlay">
             <div class="hero-content">
@@ -59,22 +56,18 @@
         <div class="slider-dots" id="sliderDots">
             <span class="dot active"></span>
             <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
         </div>
     </section>
 
     <div class="container home-intro">
         <div class="grid-2col">
             <div class="grid-text">
-                <p class="lead-text" data-i18n="home_intro">Un ristorante immerso nella natura friulana, dove la cucina tipica incontra l'autenticità dei prodotti locali. Qui si mangia come a casa: piatti genuini, atmosfera rilassante, sapori che raccontano la tradizione.</p>
+                <p class="lead-text" data-i18n="home_intro">L'idea nasce dalla volontà di costruire assieme qualcosa di nostro. Grazie alla passione di Daniela per la cucina, allestiamo il nostro sottoportico per accogliere le persone e proporre dei piatti freddi. Nell'arco di due anni iniziamo a intraprendere la strada dei piatti caldi, dove la cucina tipica incontra l'autenticità dei prodotti locali friulani. Qui si mangia come a casa: piatti genuini, atmosfera rilassante, sapori che raccontano la tradizione.</p>
                 <h3 data-i18n="home_cuisine_title">Cucina tipica friulana</h3>
                 <ul class="features-list">
-                    <li><span class="emoji-icon">🍽️</span> <span data-i18n="home_feat1">ricette artigianali</span></li>
-                    <li><span class="emoji-icon">🌿</span> <span data-i18n="home_feat2">ingredienti locali e controllati</span></li>
-                    <li><span class="emoji-icon">🧀</span> <span data-i18n="home_feat3">piatti preparati secondo tradizione</span></li>
-                    <li><span class="emoji-icon">🍷</span> <span data-i18n="home_feat4">sapori raffinati, veri, genuini</span></li>
+                    <li><span class="emoji-icon">🌿</span> <span data-i18n="home_feat1">ingredienti locali e controllati a km 0</span></li>
+                    <li><span class="emoji-icon">🍽️</span> <span data-i18n="home_feat2">piatti preparati secondo tradizione</span></li>
+                    <li><span class="emoji-icon">🍷</span> <span data-i18n="home_feat3">sapori semplici, veri, genuini</span></li>
                 </ul>
                 <a href="Chi-siamo.html" class="btn-outline" data-i18n="btn_scopri">Scopri la nostra storia</a>
             </div>
@@ -88,22 +81,13 @@
 
         <div class="home-features">
             <div class="feature-block">
-                <h3 data-i18n="home_unique_title">🌳 Un luogo unico</h3>
-                <p data-i18n="home_unique_desc">Circondato dal verde, La Sinica è il posto ideale per:</p>
+                <h3 data-i18n="home_unique_title">🌳 Un luogo unico immerso nel verde</h3>
+                <p data-i18n="home_unique_desc">La Sinica è il posto ideale per:</p>
                 <ul>
                     <li><span class="emoji-icon">🌳</span> <span data-i18n="home_unique1">pranzi e cene in tranquillità</span></li>
                     <li><span class="emoji-icon">👥</span> <span data-i18n="home_unique2">famiglie e gruppi</span></li>
-                    <li><span class="emoji-icon">🏠</span> <span data-i18n="home_unique3">ambiente rustico e accogliente</span></li>
+                    <li><span class="emoji-icon">🏠</span> <span data-i18n="home_unique3">chi cerca un ambiente rustico e accogliente</span></li>
                 </ul>
-            </div>
-            <div class="feature-block">
-                <h3 data-i18n="home_events_title">🎉 Eventi e feste private</h3>
-                <p data-i18n="home_events_desc">Disponibile per compleanni, lauree, matrimoni, comunioni, cene aziendali, feste a tema. Menu personalizzabili, buffet o servizio alla carta.</p>
-                <a href="Contatti.html" class="btn-outline" style="margin-top: 10px;" data-i18n="contatta">Richiedi informazioni</a>
-            </div>
-            <div class="feature-block">
-                <h3 data-i18n="home_quality_title">⭐ Qualità e convenienza</h3>
-                <p data-i18n="home_quality_desc">Piatti ottimi, porzioni generose, prezzi ancora migliori. La Sinica è il luogo dove si mangia bene, si sta bene e si spende il giusto.</p>
             </div>
         </div>
     </div>
@@ -113,17 +97,13 @@
     <div class="container">
         <p>© 2025 La Sinica - Ristorante | <span data-i18n="footer_text">Cucina tipica friulana</span></p>
         <div class="social-icons">
-            <a href="#">📘</a>
-            <a href="#">📷</a>
-            <a href="https://wa.me/393472618470">💬</a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/393472618470"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
-<style>
-    .btn-outline { background: transparent; border: 2px solid #8b5a2b; color: #8b5a2b; padding: 8px 20px; border-radius: 40px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.3s; font-size: 0.9rem; }
-    .btn-outline:hover { background: #8b5a2b; color: white; }
-</style>
 </body>
 </html>

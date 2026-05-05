@@ -14,7 +14,7 @@
         .about-hero {
             position: relative;
             background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 100%),
-                        url('images/La Sinica - chi siamo1.jpg') center/cover no-repeat;
+                        url('images/La Sinica - home (1).jpeg') center/cover no-repeat;
             min-height: 60vh;
             display: flex;
             align-items: flex-end;
@@ -246,6 +246,52 @@
             object-fit: cover;
             display: block;
         }
+        /* Galleria immagini aggiuntiva */
+        .gallery-section {
+            margin-top: 60px;
+        }
+        .gallery-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #6b3f1c;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .gallery-section h2:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #d9b48b;
+            margin: 12px auto 0;
+        }
+        .about-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .about-gallery-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+        .about-gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .about-gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .about-gallery-card:hover img {
+            transform: scale(1.05);
+        }
         @media (max-width: 800px) {
             .storia-wrap,
             .filosofia-wrap,
@@ -258,6 +304,9 @@
             .filosofia-text { padding: 36px 28px; }
             .luogo-text { padding: 36px 28px; }
             .luogo-img { min-height: 260px; }
+            .about-gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
     </style>
 </head>
@@ -349,6 +398,25 @@
                 </div>
                 <div class="luogo-img">
                     <img src="images/La Sinica - chi siamo2.jpg" alt="La Sinica immersa nella natura">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERIA AGGIUNTIVA -->
+    <section class="page-section">
+        <div class="container">
+            <div class="gallery-section">
+                <h2 data-i18n="gallery_title">I nostri spazi</h2>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">Scopri l'atmosfera e gli ambienti de La Sinica</p>
+                <div class="about-gallery-grid">
+                    <div class="about-gallery-card"><img src="images/La Sinica - interno 4.jpg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/image int(1).jpeg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/image int(2).jpeg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/image int(4).jpeg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/image int(7).jpeg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/image int(17).jpeg" alt="Interno La Sinica"></div>
+                    <div class="about-gallery-card"><img src="images/eventi (1).jpg" alt="Eventi La Sinica"></div>
                 </div>
             </div>
         </div>

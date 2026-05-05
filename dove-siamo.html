@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dove Siamo | La Sinica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-bar">
+        <div class="logo">
+            <h1>La Sinica</h1>
+            <p>RISTORANTE · CUCINA FRIULANA</p>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
+            <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
+            <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="dove-siamo-hero">
+        <div class="container">
+            <h2 class="section-title" data-i18n="where_title">Dove Siamo</h2>
+            <p class="section-subtitle" data-i18n="where_subtitle">Vieni a trovarci nel cuore del Friuli Venezia Giulia</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="dove-grid">
+                <div class="dove-info-card">
+                    <div class="dove-info-item">
+                        <div class="dove-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 data-i18n="address_label">Indirizzo</h4>
+                            <p data-i18n="address_text">Via Sinica 12, Privano - Bagnaria Arsa (UD), 33050</p>
+                        </div>
+                    </div>
+                    <div class="dove-info-item">
+                        <div class="dove-info-icon"><i class="far fa-clock"></i></div>
+                        <div>
+                            <h4 data-i18n="hours_label">Orari</h4>
+                            <p data-i18n="hours_text">Ven 17:00–22:00 | Sab-Dom 11:00–22:00 | Altri giorni su prenotazione</p>
+                        </div>
+                    </div>
+                    <div class="dove-info-item">
+                        <div class="dove-info-icon"><i class="fas fa-car"></i></div>
+                        <div>
+                            <h4 data-i18n="parking_label">Parcheggio</h4>
+                            <p data-i18n="parking_text">Ampio parcheggio gratuito disponibile</p>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Sinica+12+Bagnaria+Arsa" target="_blank" class="btn-outline dove-btn-directions" data-i18n="directions_btn">
+                        <i class="fas fa-route"></i> Ottieni indicazioni
+                    </a>
+                </div>
+                <div class="dove-map">
+                    <iframe src="https://www.google.com/maps?q=Via+Sinica+12+Bagnaria+Arsa&output=embed" width="100%" height="100%" style="border:0; border-radius: 24px; min-height: 420px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <h3 class="text-center" data-i18n="nearby_title">Nei dintorni</h3>
+            <div class="reach-grid">
+                <div class="reach-card">
+                    <img src="images/outlet.png" alt="Palmanova Designer Village" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
+                    <h4 data-i18n="nearby_outlet_title">Palmanova Designer Village</h4>
+                    <p data-i18n="nearby_outlet_text">A soli 2 km dal ristorante si trova il Palmanova Designer Village, l'outlet di riferimento del Friuli Venezia Giulia.</p>
+                </div>
+                <div class="reach-card">
+                    <img src="images/ciclabile.png" alt="Pista Ciclabile Palmanova–Grado" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
+                    <h4 data-i18n="nearby_bike_title">Pista Ciclabile Palmanova–Grado</h4>
+                    <p data-i18n="nearby_bike_text">Il ristorante si trova direttamente sulla pista ciclabile che collega Palmanova a Grado: la sosta perfetta per una pausa durante il percorso.</p>
+                </div>
+                <div class="reach-card">
+                    <img src="images/palmanova.png" alt="Centro Storico di Palmanova" style="width:100%; border-radius:12px; margin-bottom:1rem; object-fit:cover; height:180px;">
+                    <h4 data-i18n="nearby_palmanova_title">Centro Storico di Palmanova</h4>
+                    <p data-i18n="nearby_palmanova_text">A soli 2 km dal ristorante sorge Palmanova, la città stellata patrimonio UNESCO, un gioiello rinascimentale unico al mondo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section bg-cream">
+        <div class="container">
+            <h3 class="text-center" data-i18n="how_to_reach_title">Come raggiungerci</h3>
+            <div class="reach-grid">
+                <div class="reach-card">
+                    <span style="font-size:2rem;">🚗</span>
+                    <h4 data-i18n="reach_car_title">In auto</h4>
+                    <p data-i18n="reach_car_text">Dall'autostrada A4 (Venezia–Trieste), uscita Palmanova. Seguire le indicazioni per Bagnaria Arsa, poi per Privano. Ampio parcheggio gratuito.</p>
+                </div>
+                <div class="reach-card">
+                    <span style="font-size:2rem;">🚂</span>
+                    <h4 data-i18n="reach_train_title">In treno</h4>
+                    <p data-i18n="reach_train_text">Stazione più vicina: Palmanova o Cervignano del Friuli. Da lì consigliamo di proseguire in taxi o auto a noleggio.</p>
+                </div>
+                <div class="reach-card">
+                    <span style="font-size:2rem;">✈️</span>
+                    <h4 data-i18n="reach_plane_title">In aereo</h4>
+                    <p data-i18n="reach_plane_text">Aeroporto di Trieste–Ronchi dei Legionari (ca. 30 min) o Venezia Marco Polo (ca. 1 ora). Noleggio auto disponibile in entrambi gli aeroporti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 La Sinica - Ristorante | <span data-i18n="footer_text">Cucina tipica friulana</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/393472618470"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

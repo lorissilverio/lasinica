@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | La Sinica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 100%),
+                        url('images/La Sinica - chi siamo1.jpg') center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 0;
+            overflow: hidden;
+        }
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 80px;
+            background: #fefaf5;
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 60px 0 100px;
+            text-align: center;
+            color: white;
+        }
+        .about-hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+        .about-hero-content p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            font-style: italic;
+        }
+        .storia-section {
+            padding: 80px 0 60px;
+        }
+        .storia-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        .storia-img {
+            position: relative;
+            min-height: 420px;
+        }
+        .storia-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .storia-text {
+            background: #fff8f0;
+            padding: 56px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .storia-text .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b46f3a;
+            margin-bottom: 16px;
+        }
+        .storia-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #3b2a1f;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        .storia-text p {
+            color: #5a4a3a;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        .filosofia-section {
+            padding: 80px 0;
+        }
+        .filosofia-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        .filosofia-img {
+            min-height: 420px;
+        }
+        .filosofia-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .filosofia-text {
+            background: #3b2a1f;
+            padding: 56px 52px;
+            color: #f5e6d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .filosofia-text .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d9b48b;
+            margin-bottom: 16px;
+        }
+        .filosofia-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #fff6ef;
+            margin-bottom: 8px;
+        }
+        .filosofia-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #c9a87c;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .filosofia-pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .pillar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 14px;
+            padding: 14px 18px;
+            transition: background 0.3s;
+        }
+        .pillar:hover {
+            background: rgba(255,255,255,0.12);
+        }
+        .pillar-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .pillar span {
+            font-weight: 600;
+            color: #f0e0cc;
+            font-size: 0.95rem;
+        }
+        .luogo-section {
+            padding: 80px 0;
+        }
+        .luogo-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        }
+        .luogo-text {
+            background: #3b2a1f;
+            padding: 56px 52px;
+            color: #f5e6d3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .luogo-text .eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d9b48b;
+            margin-bottom: 16px;
+        }
+        .luogo-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #fff6ef;
+            margin-bottom: 24px;
+        }
+        .luogo-text p {
+            line-height: 1.8;
+            margin-bottom: 16px;
+            color: #ddd2c4;
+            font-size: 1rem;
+        }
+        .luogo-notes {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .luogo-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 14px;
+            padding: 14px 18px;
+        }
+        .luogo-note .note-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .luogo-note p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #f0e0cc;
+        }
+        .luogo-img {
+            min-height: 420px;
+        }
+        .luogo-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 800px) {
+            .storia-wrap,
+            .filosofia-wrap,
+            .luogo-wrap {
+                grid-template-columns: 1fr;
+            }
+            .storia-img { min-height: 260px; order: -1; }
+            .storia-text { padding: 36px 28px; }
+            .filosofia-img { min-height: 260px; order: -1; }
+            .filosofia-text { padding: 36px 28px; }
+            .luogo-text { padding: 36px 28px; }
+            .luogo-img { min-height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-bar">
+        <div class="logo">
+            <h1>La Sinica</h1>
+            <p>CUCINA FRIULANA</p>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
+            <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
+            <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <div class="container">
+                <h2 data-i18n="about_title">Chi Siamo</h2>
+                <p data-i18n="about_subtitle">La nostra storia, la nostra passione, la nostra famiglia</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="storia-section">
+        <div class="container">
+            <div class="storia-wrap">
+                <div class="storia-img">
+                    <img src="images/La Sinica - chi siamo1.jpg" alt="La Sinica esterno">
+                </div>
+                <div class="storia-text">
+                    <p class="eyebrow" data-i18n="about_eyebrow">Le nostre origini</p>
+                    <h3 data-i18n="about_history_title">La nostra storia</h3>
+                    <p data-i18n="about_history_text">La Sinica nasce per un percorso di esigenze familiari. Con il passare del tempo abbiamo pensato di far conoscere i nostri piatti semplici e di qualità a km 0, con l'obiettivo di valorizzare la cucina friulana e i prodotti del territorio. La nostra è una conduzione familiare.</p>
+                    <p data-i18n="about_history_text2">Ogni piatto è preparato con cura, utilizzando ingredienti locali e controllati, seguendo ricette tramandate nel tempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="filosofia-section">
+        <div class="container">
+            <div class="filosofia-wrap">
+                <div class="filosofia-img">
+                    <img src="images/La Sinica - chi siamo3.jpg" alt="La filosofia di La Sinica">
+                </div>
+                <div class="filosofia-text">
+                    <p class="eyebrow" data-i18n="about_eyebrow2">I nostri principi</p>
+                    <h3 data-i18n="about_philosophy_title">La nostra filosofia</h3>
+                    <p class="filosofia-quote" data-i18n="about_belief">Crediamo in una cucina che racconta il territorio, fatta di sapori veri e di ospitalità sincera.</p>
+                    <div class="filosofia-pillars">
+                        <div class="pillar"><span class="pillar-icon">❤️</span><span data-i18n="about_phil1">autenticità</span></div>
+                        <div class="pillar"><span class="pillar-icon">🌿</span><span data-i18n="about_phil2">semplicità</span></div>
+                        <div class="pillar"><span class="pillar-icon">⭐</span><span data-i18n="about_phil3">qualità</span></div>
+                        <div class="pillar"><span class="pillar-icon">🏛️</span><span data-i18n="about_phil4">rispetto della tradizione</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="luogo-section">
+        <div class="container">
+            <div class="luogo-wrap">
+                <div class="luogo-text">
+                    <p class="eyebrow" data-i18n="about_eyebrow3">Dove siamo</p>
+                    <h3 data-i18n="about_place_title">Il luogo</h3>
+                    <p data-i18n="about_place_text">Il ristorante è immerso nella natura, tra vigneti, alberi e silenzio. Un ambiente rustico, caldo e accogliente, perfetto per rilassarsi e godersi un pasto genuino lontano dal traffico.</p>
+                    <div class="luogo-notes">
+                        <div class="luogo-note"><span class="note-icon">📅</span><p data-i18n="about_booking_note">Gradita la prenotazione.</p></div>
+                        <div class="luogo-note"><span class="note-icon">👥</span><p data-i18n="about_events_note">Disponibilità ad eventi anche durante la settimana, con un minimo di 10 persone.</p></div>
+                    </div>
+                </div>
+                <div class="luogo-img">
+                    <img src="images/La Sinica - chi siamo2.jpg" alt="La Sinica immersa nella natura">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 La Sinica - Ristorante | <span data-i18n="footer_text">Cucina tipica friulana</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/393472618470"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

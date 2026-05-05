@@ -90,7 +90,7 @@
         }
         .menu-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
         .menu-gallery-item {
@@ -114,27 +114,6 @@
         }
         .menu-gallery-item:hover img {
             transform: scale(1.05);
-        }
-        .menu-gallery-item::after {
-            content: '🔍';
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(139, 90, 43, 0.85);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-        .menu-gallery-item:hover::after {
-            opacity: 1;
         }
         .wines-section {
             background: #faf3ea;
@@ -191,7 +170,7 @@
             vertical-align: middle;
         }
         @media (max-width: 800px) {
-            .menu-gallery { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+            .menu-gallery { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
             .menu-category-header h2 { font-size: 1.6rem; }
             .menu-hero h1 { font-size: 2.8rem; }
             .wines-grid { grid-template-columns: repeat(2, 1fr); }
@@ -213,12 +192,12 @@
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-            <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
-            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
-            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
-            <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
-            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
-            <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+            <li><a href="chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="eventi.html" data-i18n="nav_events">Eventi</a></li>
+            <li><a href="contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
+            <li><a href="faq.html" data-i18n="nav_faq">FAQ</a></li>
         </ul>
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="it">IT</button>
@@ -240,66 +219,65 @@
     <section class="page-section">
         <div class="container">
 
-            <!-- ANTIPASTI - immagini: menu (1), menu (8), menu (4), menu (13), menu (19) -->
+            <!-- ANTIPASTI -->
             <div class="menu-category">
                 <div class="menu-category-header">
                     <div class="category-icon">🍷</div>
                     <h2 data-i18n="appetizers_title">Antipasti</h2>
                 </div>
                 <div class="menu-gallery">
-                    <div class="menu-gallery-item"><img src="images/menu (1).jpeg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (8).jpeg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (4).jpeg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (4).jpg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (13).jpg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (19).jpg" alt="Antipasto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (14).jpg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(1).jpeg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(8).jpeg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(4).jpeg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(13).jpg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(19).jpg" alt="Antipasto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(14).jpg" alt="Antipasto"></div>
                 </div>
             </div>
 
-            <!-- PRIMI PIATTI - immagini: menu (1), menu (3), menu (2), menu (5), menu (7) -->
+            <!-- PRIMI PIATTI -->
             <div class="menu-category">
                 <div class="menu-category-header">
                     <div class="category-icon">🍝</div>
                     <h2 data-i18n="first_courses_title">Primi Piatti</h2>
                 </div>
                 <div class="menu-gallery">
-                    <div class="menu-gallery-item"><img src="images/menu (1).jpg" alt="Primo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (3).jpeg" alt="Primo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (2).jpeg" alt="Primo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (5).jpg" alt="Primo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(1).jpg" alt="Primo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(3).jpeg" alt="Primo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(2).jpeg" alt="Primo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(5).jpg" alt="Primo piatto"></div>
                 </div>
             </div>
 
-            <!-- SECONDI PIATTI - immagini: menu (2), menu (5), menu (7), menu (16), menu (17), menu (12), menu (18) -->
+            <!-- SECONDI PIATTI -->
             <div class="menu-category">
                 <div class="menu-category-header">
                     <div class="category-icon">🥩</div>
                     <h2 data-i18n="second_courses_title">Secondi Piatti</h2>
                 </div>
                 <div class="menu-gallery">
-                    <div class="menu-gallery-item"><img src="images/menu (2).jpeg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (5).jpg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (7).jpg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (12).jpg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (16).jpg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (17).jpg" alt="Secondo piatto"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (18).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(2).jpeg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(5).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(7).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(12).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(16).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(17).jpg" alt="Secondo piatto"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(18).jpg" alt="Secondo piatto"></div>
                 </div>
             </div>
 
-            <!-- DOLCI - immagini: menu (5), menu (6), menu (10), menu (11), menu (15), menu (14) -->
+            <!-- DOLCI -->
             <div class="menu-category">
                 <div class="menu-category-header">
                     <div class="category-icon">🍰</div>
                     <h2 data-i18n="desserts_title">Dolci della Casa</h2>
                 </div>
                 <div class="menu-gallery">
-                    <div class="menu-gallery-item"><img src="images/menu (5).jpg" alt="Dolce"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (6).jpg" alt="Dolce"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (10).jpg" alt="Dolce"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (11).jpg" alt="Dolce"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (15).jpg" alt="Dolce"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(5).jpg" alt="Dolce"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(6).jpg" alt="Dolce"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(10).jpg" alt="Dolce"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(11).jpg" alt="Dolce"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(15).jpg" alt="Dolce"></div>
                 </div>
             </div>
 
@@ -310,10 +288,10 @@
                     <h2 data-i18n="special_menus_title">Menu Speciali & Buffet</h2>
                 </div>
                 <div class="menu-gallery">
-                    <div class="menu-gallery-item"><img src="images/menu (19).jpg" alt="Menu speciale"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(19).jpg" alt="Menu speciale"></div>
                     <div class="menu-gallery-item"><img src="images/menu.jpg" alt="Menu speciale"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (4).jpeg" alt="Menu speciale"></div>
-                    <div class="menu-gallery-item"><img src="images/menu (8).jpeg" alt="Menu speciale"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(4).jpeg" alt="Menu speciale"></div>
+                    <div class="menu-gallery-item"><img src="images/menu%20(8).jpeg" alt="Menu speciale"></div>
                 </div>
             </div>
 
@@ -329,7 +307,6 @@
                     <div class="wine-card"><div class="wine-icon">🥤</div><h4 data-i18n="wine_3_name">Bevande analcoliche</h4></div>
                     <div class="wine-card"><div class="wine-icon">🥃</div><h4 data-i18n="wine_4_name">Digestivi fatti in casa</h4></div>
                 </div>
-
             </div>
 
             <div class="menu-note">

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi | La Sinica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hero Slider per Eventi */
+        .events-slider {
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .events-slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .events-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .events-slide.active {
+            opacity: 1;
+        }
+        .events-overlay {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.55);
+            width: 100%;
+            padding: 100px 0;
+        }
+        .events-overlay h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .events-overlay p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            color: white;
+        }
+        .slider-prev, .slider-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .slider-prev:hover, .slider-next:hover {
+            background: rgba(255, 255, 255, 0.6);
+            color: #8b5a2b;
+        }
+        .slider-prev { left: 20px; }
+        .slider-next { right: 20px; }
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dot.active { background: #8b5a2b; }
+        .dot:hover { background: #d9b48b; }
+
+        .events-grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 60px 0;
+        }
+        .events-list {
+            background: #fffaf5;
+            border-radius: 32px;
+            padding: 35px;
+        }
+        .events-list h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #6b3f1c;
+            margin-bottom: 25px;
+            border-left: 4px solid #d9b48b;
+            padding-left: 20px;
+        }
+        .events-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .events-list li {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: #3b2a1f;
+        }
+        .events-list li i {
+            color: #8b5a2b;
+            width: 28px;
+            font-size: 1.2rem;
+        }
+        .services-box {
+            background: #fefaf5;
+            border-radius: 32px;
+            padding: 35px;
+            height: fit-content;
+        }
+        .services-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #6b3f1c;
+            margin-bottom: 25px;
+            border-left: 4px solid #d9b48b;
+            padding-left: 20px;
+        }
+        .services-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services-box li {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: #3b2a1f;
+        }
+        .services-box li i {
+            color: #8b5a2b;
+            width: 28px;
+            font-size: 1.2rem;
+        }
+        .gallery-section {
+            margin-top: 60px;
+        }
+        .gallery-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #6b3f1c;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .gallery-section h2:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #d9b48b;
+            margin: 12px auto 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .gallery-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 20px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-card:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        .gallery-overlay p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        .events-cta {
+            background: #f5ede4;
+            border-radius: 40px;
+            padding: 50px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .events-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #6b3f1c;
+            margin-bottom: 15px;
+        }
+        .events-cta p {
+            color: #5a4a3a;
+            margin-bottom: 25px;
+        }
+        .events-cta .btn-reserve {
+            margin-top: 0;
+        }
+        @media (max-width: 800px) {
+            .events-grid-2col {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .events-overlay h1 {
+                font-size: 2.5rem;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .events-cta {
+                padding: 30px 20px;
+            }
+            .slider-prev, .slider-next {
+                font-size: 1.5rem;
+                padding: 8px 15px;
+            }
+            .slider-prev { left: 10px; }
+            .slider-next { right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-bar">
+        <div class="logo">
+            <h1>La Sinica</h1>
+            <p>RISTORANTE · CUCINA FRIULANA</p>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="Chi-siamo.html" data-i18n="nav_about">Chi Siamo</a></li>
+            <li><a href="Menu.html" data-i18n="nav_menu">Menu</a></li>
+            <li><a href="Eventi.html" data-i18n="nav_events">Eventi</a></li>
+            <li><a href="Contatti.html" data-i18n="nav_contacts">Contatti</a></li>
+            <li><a href="Dove-siamo.html" data-i18n="nav_where">Dove Siamo</a></li>
+            <li><a href="FAQ.html" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="it">IT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Slider Eventi -->
+    <section class="events-slider">
+        <div class="events-slideshow-container" id="eventsSlideshow">
+            <div class="events-slide active" style="background-image: url('images/La Sinica - home (4).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (1).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (2).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (3).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (4).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (5).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (6).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (7).jpeg');"></div>
+            <div class="events-slide" style="background-image: url('images/La Sinica - Eventi (8).jpeg');"></div>
+        </div>
+        <div class="events-overlay">
+            <div class="container">
+                <h1 data-i18n="events_title">Eventi</h1>
+                <p data-i18n="events_subtitle">Organizza il tuo evento a La Sinica</p>
+            </div>
+        </div>
+        <button class="slider-prev" id="eventsSliderPrev">❮</button>
+        <button class="slider-next" id="eventsSliderNext">❯</button>
+        <div class="slider-dots" id="eventsSliderDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="events-grid-2col">
+                <div class="events-list">
+                    <h2 data-i18n="events_available_title">Disponibile per</h2>
+                    <ul>
+                        <li><i class="fas fa-heart"></i> <span data-i18n="event_1">matrimoni</span></li>
+                        <li><i class="fas fa-church"></i> <span data-i18n="event_2">comunioni e cresime</span></li>
+                        <li><i class="fas fa-birthday-cake"></i> <span data-i18n="event_3">feste di compleanno</span></li>
+                        <li><i class="fas fa-graduation-cap"></i> <span data-i18n="event_4">lauree</span></li>
+                        <li><i class="fas fa-ring"></i> <span data-i18n="event_5">anniversari</span></li>
+                        <li><i class="fas fa-briefcase"></i> <span data-i18n="event_6">cene aziendali</span></li>
+                        <li><i class="fas fa-mask"></i> <span data-i18n="event_7">eventi a tema</span></li>
+                    </ul>
+                </div>
+                <div class="services-box">
+                    <h2 data-i18n="services_title">Servizi offerti</h2>
+                    <ul>
+                        <li><i class="fas fa-utensils"></i> <span data-i18n="service_1">menu personalizzati</span></li>
+                        <li><i class="fas fa-table"></i> <span data-i18n="service_2">buffet o servizio al tavolo</span></li>
+                        <li><i class="fas fa-tree"></i> <span data-i18n="service_3">ampi spazi interni ed esterni</span></li>
+                        <li><i class="fas fa-home"></i> <span data-i18n="service_4">atmosfera rustica e rilassante</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gallery-section">
+                <h2 data-i18n="gallery_title">Galleria</h2>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">La nostra galleria fotografica racconta l'anima de La Sinica</p>
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (1).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_1">Momenti speciali celebrati con voi</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (2).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_2">L'atmosfera festosa dei vostri eventi</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (3).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_3">Allestimenti personalizzati per ogni occasione</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (4).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_4">Il verde che circonda il nostro ristorante</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (5).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_5">Cene aziendali e feste private</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (6).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_6">Matrimoni da sogno</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (7).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_7">Comunioni e cresime</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/La Sinica - Eventi (8).jpeg" alt="Evento">
+                        <div class="gallery-overlay">
+                            <p data-i18n="gallery_8">Compleanni e lauree indimenticabili</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="events-cta">
+                <h3 data-i18n="cta_title">Scopri i momenti più belli vissuti insieme</h3>
+                <p data-i18n="cta_subtitle">Contattaci per organizzare il tuo evento indimenticabile</p>
+                <a href="Contatti.html" class="btn-reserve" data-i18n="cta_button">Richiedi informazioni</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 La Sinica - Ristorante | <span data-i18n="footer_text">Cucina tipica friulana</span></p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/393472618470"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ============================================
+    // SLIDER PER PAGINA EVENTI
+    // ============================================
+    (function() {
+        const slides = document.querySelectorAll('.events-slide');
+        const dots = document.querySelectorAll('#eventsSliderDots .dot');
+        const prevBtn = document.getElementById('eventsSliderPrev');
+        const nextBtn = document.getElementById('eventsSliderNext');
+        
+        if (!slides.length) return;
+        
+        let slideIndex = 0;
+        let slideInterval;
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            if (n >= slides.length) slideIndex = 0;
+            if (n < 0) slideIndex = slides.length - 1;
+            slides[slideIndex].classList.add('active');
+            if (dots[slideIndex]) dots[slideIndex].classList.add('active');
+        }
+        
+        function nextSlide() { slideIndex++; showSlide(slideIndex); resetInterval(); }
+        function prevSlide() { slideIndex--; showSlide(slideIndex); resetInterval(); }
+        function resetInterval() { 
+            clearInterval(slideInterval); 
+            slideInterval = setInterval(() => { 
+                slideIndex++; 
+                showSlide(slideIndex); 
+            }, 5000); 
+        }
+        
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slideIndex = index;
+                showSlide(slideIndex);
+                resetInterval();
+            });
+        });
+        
+        showSlide(0);
+        slideInterval = setInterval(() => { 
+            slideIndex++; 
+            showSlide(slideIndex); 
+        }, 5000);
+    })();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

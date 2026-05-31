@@ -1,0 +1,13 @@
+# robots.txt – La Sinica Ristorante
+# https://www.lasinica.com
+
+User-agent: *
+Allow: /
+
+# Non indicizzare file di sistema o cartelle private
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Sitemap
+Sitemap: https://www.lasinica.com/sitemap.xml
